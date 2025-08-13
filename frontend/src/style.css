@@ -1,0 +1,166 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  height: 100vh;
+  text-align: center;
+}
+
+/* 추가: 두 패널 레이아웃 스타일 */
+.appRoot { /* 단일 책임: 루트 레이아웃 */
+  display: grid;
+  grid-template-columns: 420px 1fr; /* 오버뷰 폭 확대 */
+  grid-auto-rows: 100%;
+  height: 100vh;
+  background: #f6f8fa;
+  color: #222;
+  font-family: system-ui, sans-serif;
+}
+
+.overviewPanel { /* 단일 책임: 좌측 패널 */
+  display: flex;
+  flex-direction: column;
+  padding: 18px 16px 12px 16px;
+  border-right: 1px solid #d0d7de;
+  background: #fff;
+  overflow: hidden;
+}
+
+.detailPanel { /* 단일 책임: 우측 상세 패널 */
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 16px 24px;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.panelHeader { /* 단일 책임: 패널 헤더 */
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.panelGroup { /* 단일 책임: 그룹 컨테이너 */
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.groupTitle { /* 단일 책임: 그룹 제목 */
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.largeList { /* 단일 책임: 큰 목록 그룹 */
+  flex: 1;
+  min-height: 260px;
+}
+
+.scrollArea { /* 단일 책임: 스크롤 가능 영역 */
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #e2e5e9;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #fafbfc;
+}
+
+.scrollArea label:hover {
+  background: #eef3f8;
+}
+
+button { /* 단일 책임: 버튼 스타일 */
+  padding: 7px 14px;
+  font-size: 13px;
+  border: 1px solid #c3cad1;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .15s, box-shadow .15s;
+}
+
+button:hover:enabled {
+  background: #f0f4f7;
+}
+
+button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.statusBlock { /* 단일 책임: 상태 블록 */
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  row-gap: 6px;
+  column-gap: 12px;
+  background: #fff;
+  padding: 14px 16px;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.statusRow { /* 단일 책임: 상태 행 */
+  display: contents;
+}
+
+.statusRow strong { /* 단일 책임: 라벨 스타일 */
+  font-weight: 600;
+  text-align: right;
+  color: #444;
+}
+
+.statusRow span { /* 단일 책임: 값 스타일 */
+  text-align: left;
+}
+
+.messageBlock { /* 단일 책임: 메시지 영역 */
+  min-height: 40px;
+  font-size: 13px;
+  color: #1a73e8;
+}
+
+.messageLine { /* 단일 책임: 메시지 라인 */
+  line-height: 1.4;
+}
+
+.loadingLine { /* 단일 책임: 로딩 라인 */
+  font-size: 12px;
+  color: #666;
+}
+
+.previewPlaceholder { /* 단일 책임: 프리뷰 컨테이너 */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.previewBox { /* 단일 책임: 프리뷰 박스 */
+  flex: 1;
+  border: 2px dashed #c0c7ce;
+  border-radius: 10px;
+  background: repeating-linear-gradient(45deg,#f5f7f9,#f5f7f9 10px,#eef1f4 10px,#eef1f4 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #555;
+  padding: 12px;
+}
+
+.footNote { /* 단일 책임: 하단 주석 */
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.spacer { /* 단일 책임: 가변 여백 */
+  flex: 0 0 8px;
+}
