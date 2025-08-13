@@ -7,6 +7,7 @@ toolchain go1.24.5
 require (
 	github.com/google/uuid v1.6.0
 	github.com/kbinani/screenshot v0.0.0-20250624051815-089614a94018
+	github.com/wailsapp/wails v1.16.9
 	github.com/wailsapp/wails/v2 v2.10.2
 	go.uber.org/zap v1.27.0
 	google.golang.org/grpc v1.74.2
@@ -14,6 +15,7 @@ require (
 )
 
 require (
+	github.com/abadojack/whatlanggo v1.0.1 // indirect
 	github.com/bep/debounce v1.2.1 // indirect
 	github.com/gen2brain/shm v0.1.0 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
@@ -34,6 +36,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/samber/lo v1.49.1 // indirect
+	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/tkrajina/go-reflector v0.5.8 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
